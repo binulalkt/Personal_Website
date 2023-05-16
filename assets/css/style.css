@@ -429,6 +429,8 @@ section .container {
 .profile-picture {
   position:relative;
   display: inline-block;
+  height: 100%;
+  width: 100%;
   opacity: 80;
 }
 

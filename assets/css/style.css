@@ -427,6 +427,7 @@ section .container {
   color: #18d26e;
 }
 .profile-picture {
+  position:relative;
   display: inline-block;
   height: 100px;
   width: auto;

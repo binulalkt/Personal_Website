@@ -429,9 +429,7 @@ section .container {
 .profile-picture {
   position:relative;
   display: inline-block;
-  width: 400px;
-  height: 400px;
-  opacity: 90;
+  opacity: 80;
 }
 
 .about-me .content ul {

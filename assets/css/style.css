@@ -429,7 +429,7 @@ section .container {
 .profile-picture {
   position:relative;
   display: inline-block;
-  height: 200px;
+  height: 100px;
   width: auto;
   opacity: 80;
 }

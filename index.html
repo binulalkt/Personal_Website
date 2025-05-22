@@ -2,21 +2,39 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Essential SEO Tags -->
+  <title>Binu Lal K T | Software Developer | Portfolio & Projects</title>
   <meta name="google-site-verification" content="5_7Y8_WuUUGaG7jqhAmwT2kNNCrxaAsfr9DDz-GkFxM" />
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Binu Lal K T Portfolio</title>
   <meta content="Binu Lal K T" name=" Personal Portfolio of Binu Lal K T">
-  <meta name="description" content="Binu Lal K T, Software Developer & Embedded Engineer, worked with Cabal Technologies LLP and Onewiibe on projects like Smart Hydroponics Systems and Interactive Games. Explore my portfolio to see my expertise in IoT, embedded systems, and web development.">
- <meta name="keywords" content="Binu Lal, Software Developer, Embedded Engineer, Cabal Technologies LLP, Onewiibe, Smart Hydroponics System, Interactive Games, IoT Development, Web Development, Electronics Engineer">
-<meta property="og:title" content="Binu Lal K T - Software Developer | Cabal Technologies LLP & Onewiibe Projects">
-<meta property="og:description" content="Software Developer with expertise in Smart Hydroponics Systems, Interactive Games, IoT, and Embedded Engineering. Worked with Cabal Technologies LLP and Onewiibe.">
-<meta property="og:image" content="assets/img/Binu_Lal_Profile.jpg"> <!-- Make sure to have a profile image -->
-<meta property="og:url" content="https://binulalkt.github.io/Personal_Website/">
-<meta property="og:type" content="website">
+  <meta name="description"
+    content="Binu Lal K T, Software Developer & Embedded Engineer, worked with Cabal Technologies LLP and Onewiibe on projects like Smart Hydroponics Systems and Interactive Games. Explore my portfolio to see my expertise in IoT, embedded systems, and web development.">
+  <meta name="keywords"
+    content="Binu Lal, Software Developer, Embedded Engineer, Cabal Technologies LLP, Onewiibe, Smart Hydroponics System, Interactive Games, IoT Development, Web Development, Electronics Engineer">
+  <meta property="og:title" content="Binu Lal K T - Software Developer | Cabal Technologies LLP & Onewiibe Projects">
+  <meta property="og:description"
+    content="Software Developer with expertise in Smart Hydroponics Systems, Interactive Games, IoT, and Embedded Engineering. Worked with Cabal Technologies LLP and Onewiibe.">
+  <meta property="og:image" content="assets/img/Binu_Lal_Profile.jpg"> <!-- Make sure to have a profile image -->
+  <meta property="og:url" content="https://binulalkt.github.io/Personal_Website/">
+  <meta property="og:type" content="website"><!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Binu Lal K T | Software Developer Portfolio">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Binu Lal K T | Software Developer Portfolio">
+  <meta name="twitter:description" content="Explore the resume and work of Abhijith — developer, thinker, builder.">
+  <meta name="twitter:image" content="assets\img\me.png">
+
+  <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Google Fonts -->
   <link
@@ -30,338 +48,411 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
 
 </head>
 
-
-
-
 <body>
+  <nav id="navbar" class="navbar" style="justify-content: center; background-color: black; position: fixed; top: 0;  font-size: 32px;
+  font-weight: 700; width: 100%; z-index: 999; overflow: hidden; font-size: 36px; font-family: 'Raleway', sans-serif;">
+    <span class="typewriter" id="typewriter"></span>
+  </nav>
+  <script>
+    const words = [
+      "Binu Lal K T",
+      "Software Developer",
+      "Embedded Engineer",
+      "Social Medi Manager"
+    ];
+    const typewriterElement = document.getElementById('typewriter');
+    let wordIndex = 0;
+    let charIndex = 0;
+    let typing = true;
+    let delayAfterTyping = 1500;
+    let delayAfterDeleting = 0;
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container">
-        <h1><a href="index.html"></a><span>Binu Lal K T</span></h1>
-        <h2>I'm a passionate <span> Software developer and Embedded Engineer </span></h2>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link active" href="#header">Home</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#resume">Resume</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
+    function type() {
+      const currentWord = words[wordIndex];
+      if (typing) {
+        charIndex++;
+        typewriterElement.textContent = currentWord.slice(0, charIndex) + ' ';
+        if (charIndex === currentWord.length) {
+          typing = false;
+          setTimeout(type, delayAfterTyping);
+        } else {
+          setTimeout(type, 100);
+        }
+      } else {
+        charIndex--;
+        typewriterElement.textContent = currentWord.slice(0, charIndex) + ' ';
+        if (charIndex === 0) {
+          typing = true;
+          wordIndex = (wordIndex + 1) % words.length;
+          setTimeout(type, delayAfterDeleting);
+        } else {
+          setTimeout(type, 50);
+        }
+      }
+    }
+    type();
+  </script>
+  <!-- ======= About Me ======= -->
+  <div class="about-me container">
+    <div class="section-title">
+      <h2>About</h2>
+      <p>Learn more about me</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4" data-aos="fade-right">
+        <img src="assets/img/me.jpg" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+        <h3 class="Sub-Heading">Software Developer</h3>
+        <p class="fst-italic">I’m Binu Lal K T, a dynamic tech enthusiast whose journey began as an Electronics &
+          Communication Engineering student, driven by a deep curiosity about how systems work and interact. My academic
+          and early project experiences led me into the world of IoT, where I played a key role in building embedded
+          systems and smart automation solutions that bridged hardware with user-centric technology.
+
+          As I progressed, I naturally evolved into a web developer, crafting full-stack applications, real-time
+          dashboards, and user interfaces that brought smart technology to life on the web. From designing clean,
+          responsive websites to deploying scalable platforms, I took initiative to lead development projects and guide
+          teams, whether it was training interns, coordinating project timelines, or solving critical technical
+          challenges under pressure..</p>
+        <p class="fst-italic">My passion for communication and creative expression led me to explore social media
+          management, where I combined tech expertise with digital strategy to build engaging content, improve brand
+          visibility, and foster community growth. In every role, I’ve demonstrated a strong sense of leadership,
+          ownership, and a forward-thinking mindset — consistently stepping up to guide teams, improve workflows, and
+          deliver impactful results.</p>
+        <p class="fst-italic">Every day, I discover new challenges and solutions, reminding me how much there is still
+          to learn. Whether it’s web development, machine learning, or tackling real-world problems, I’m always eager to
+          grow and make an impact.</p>
+        <p class="fst-italic">Today, I bring together my experience as an IoT engineer, full-stack developer, and
+          digital communicator to create meaningful tech solutions and lead with purpose in the evolving digital world.
+        </p>
+      </div>
+    </div>
+
+  </div><!-- End About Me -->
+
+  <div class="container">
+    <div class="section-title section-title-resume">
+      <div class="sec-title-main">
+        <h2>GIT</h2>
+        <p>Github Highlights</p>
+      </div>
+    </div>
+    <div class="row github">
+      <div class="col-lg-6">
+        <ul class="main-ul">
+          <li>
+            <div>
+              <i class="bi bi-chevron-right"></i>
+              <strong>
+                <a target="_blank" href="https://github.com/binulalkt/school_managment_system/" class="github-link">
+                  CBSE Arts Fest Management System
+                  <i class="bi bi-github"></i>
+                </a>
+              </strong>
+            </div>
+            <ul class="sub-ul">
+              <li>Developed for Sahodhaya arts fest management in CBSE schools </li>
+              <li>Automates the selection process for participants, ensuring transparency and fairness in the selection
+                criteria. </li>
+              <li>Generates comprehensive reports that can be exported in various formats for easy sharing and
+                record-keeping.</li>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <i class="bi bi-chevron-right"></i>
+              <strong>
+                <a target="_blank" href="https://github.com/abhijithpillaiv/ABC-choice" class="github-link">
+                  E-commerce Website for Café
+                  <i class="bi bi-github"></i>
+                </a>
+              </strong>
+            </div>
+            <ul class="sub-ul">
+              <li>Designed a secure MERN-stack café platform with PayPal integration. </li>
+              <li>Enabled admin product management, PayPal integration for customer-friendly checkout.</li>
+              <li>Deployed on Google Cloud Platform (GCP) for reliable uptime and scalability.</li>
+            </ul>
+          </li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <div class="social-links">
-        <a href="https://github.com/binulalkt" class="twitter"><i class="bi bi-github"></i></a>
-        <a href="https://www.instagram.com/binoolal" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/binu-lal-k-t" class="linkedin"><i class="bi bi-linkedin"></i></a>
-
       </div>
 
+      <div class="col-lg-6">
+        <ul class="main-ul">
+          <li>
+            <div>
+              <i class="bi bi-chevron-right"></i>
+              <strong>
+                <a target="_blank" class="github-link">
+                  Office Connect
+                  <!-- <i class="bi bi-github"></i> -->
+                </a>
+              </strong>
+            </div>
+            <ul class="sub-ul">
+              <li> An ongoing embedded project integrating attendance tracking with timing, canteen usage timing, and
+                overtime monitoring.</li>
+              <li>Automatically powers up AC units and appliances based on employee entrance and occupancy using
+                sensors and interconnected network systems. </li>
+              <li>Enables the owner to monitor resource utilization through smart energy management sensors </li>
+            </ul>
+          </li>
+          <li>
+            <div>
+              <i class="bi bi-chevron-right"></i>
+              <strong>
+                <a target="_blank">
+                  Onam-themed interactive games
+                  <!-- <i class="bi bi-github"></i> -->
+                </a>
+              </strong>
+            </div>
+            <ul class="sub-ul">
+              <li>Developed a series of four digital games inspired by traditional Onam festivities, including
+                Vallamkali, Sack Race, Maramkayam, and a unique screaming game. </li>
+              <li>These games offer an engaging, interactive experience, blending cultural celebration with modern
+                technology. </li>
+              <li>Designed to promote the joy and spirit of Onam in a fun, accessible format. </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-
-    <!-- ======= About Me ======= -->
-    <div class="about-me container">
-
-      <div class="section-title">
-        <h2>About</h2>
-        <p>Learn more about me</p>
-      </div>
-
-
-
-      <div class="row">
-        <div class="col-lg-4 Pict" data-aos="fade-right">
-          <div class="profile-picture">
-            <img src="assets/img/Binu Lal K T .jpg" alt="Binu Lal K T - Software Developer and Embedded Engineer"class="profile-picture">
-          </div>
-          <div>
-          </div>
-
-        </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>Web Developer</h3>
-          <p class="fst-italic">
-            With a background in the electronics branch and a passion for software development, I bring a unique
-            combination of technical expertise and creativity to develop user-friendly and cutting-edge solutions that
-            meet the highest standards.
-          </p>
-          <div class="row">
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>03 November 2001</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 79022 95585</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Kochi</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-6">
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>21</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BTech (ECE)</span></li>
-                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>ktbinulal@gmail.com</span></li>
-              </ul>
-            </div>
-            <div class="content" data-aos="fade-left">
-              <h3>Soft Skills </h3>
-              <ul>
-                <li><i class="bi bi-chevron-right"></i> <span>Leadership </span></li>
-                <li><i class="bi bi-chevron-right"></i> <span>Problem Solving</span></li>
-                <li><i class="bi bi-chevron-right"></i> <span>Team Work</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-
-    <!-- ======= Skills  ======= -->
-    <div class="skills container">
-
-      <div class="section-title">
-        <h2>Skills</h2>
-      </div>
-
-      <div class="row skills-content">
-
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">HTML <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">CSS <i class="val">60%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">JavaScript <i class="val">40%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">NodeJS <i class="val">35%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">ReactJS <i class="val">35%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Python <i class="val">45%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-        <div class="col-lg-6">
-
-          <div class="progress">
-            <span class="skill">C language <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-
-          <div class="progress">
-            <span class="skill">Linux <i class="val">40%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Git <i class="val">75%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">Embedded <i class="val">80%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-          <div class="progress">
-            <span class="skill">IoT Development <i class="val">40%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-          <div class="progress">
-            <span class="skill">Microcontroller programming <i class="val">40%</i></span>
-            <div class="progress-bar-wrap">
-              <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </div><!-- End Skills -->
-
-  </section><!-- End About Section -->
+  </div>
 
   <!-- ======= Resume Section ======= -->
-  <section id="resume" class="resume">
-    <div class="container">
+  <div class="container resume">
 
-      <div class="section-title section-title-resume">
-        <div class="sec-title-main">
-          <h2>Resume</h2>
-          <p>Check My Resume</p>
-        </div>
-        <div class="download-resume"><a href="assets/resume.pdf"><img src="assets/img/download.png"></a></div>
+    <div class="section-title section-title-resume">
+      <div class="sec-title-main">
+        <h2>Resume</h2>
+        <p>Check Out My Resume</p>
       </div>
-
-      <div class="row">
-        <div class="col-lg-6">
-          <h3 class="resume-title">Summary</h3>
-          <div class="resume-item pb-0">
-            <p><em>I am a B.Tech Electronics aspirant with a keen interest in pursuing a career in the software field.
-                My background in electronics, coupled with my programming skills, makes me a quick learner and problem
-                solver. I am enthusiastic about applying my skills to create innovative solutions in the software
-                industry.
-          </div>
-
-          <h3 class="resume-title">Education</h3>
-          <div class="resume-item">
-            <h4>BTech</h4>
-            <h5>2019 - 2023</h5>
-            <p><em>University College of Engineering, Thodupuzha, Kerala</em></p>
-          </div>
-          <div class="resume-item">
-            <h4>Higher Secondary</h4>
-            <h5>2017 - 2019</h5>
-            <p><em>S N D P HSS, Aluva, Kerala</em></p>
-          </div>
-        </div>
-        <div class="row">
-        </div>
-        <div class="col-lg-6">
-          <h3 class="resume-title">Professional Experience</h3>
-          <div class="resume-item">
-            <h4>Web Developer</h4>
-            <h5>2023 - Present </h5>
-            <p><em>Freelancer</em></p>
-            <p>
-              Worked as part-time Front-end developer. Worked on 4 projects.
-            </p>
-            <p>
-              Skills : JavaScript, NodeJs , ReactJS , Firebase integration
-            </p>
-          </div>
-          <div class="resume-item">
-            <h4>Sales and Marketing assosiate</h4>
-            <h5>2017 - 2019</h5>
-            <p><em>Adva Associates, Kollam, Kerala</em></p>
-            <p>
-              Worked as a part-time Sales and Marketing assosiate.
-            </p>
-            <p>
-              Skills : Sales Strategy, Relationship Building,Digital Marketing,<Br> Communication and Presentation,
-              Negotiation and Closing, Customer Service.
-            </p>
-          </div>
-        </div>
-      </div>
-
+      <div class="download-resume"><a href="assets/abhijithvp_resume.pdf"><img src="assets/img/download.png"></a></div>
     </div>
-  </section><!-- End Resume Section -->
+
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 class="resume-title">Skills</h3>
+        <div class="resume-item">
+          <h4>Frontend Development</h4>
+          <ul>
+            <li>Hands-on experience developing responsive, user-friendly web interfaces using React.js, HTML5, CSS3</li>
+            <li>Skilled in building dynamic components, integrating REST APIs, and ensuring seamless cross-device
+              compatibility.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Backend Development & Web Architecture</h4>
+          <ul>
+            <li>Proficient in building scalable backend solutions using Node.js and Express.js.</li>
+            <li>Designed RESTful APIs and implemented secure user authentication with Firebase.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>IoT Integration & Embedded Systems</h4>
+          <ul>
+            <li>Extensive experience in Arduino, ESP8266/ESP32, and sensor-based automation.</li>
+            <li>Created smart control systems with LoRa, energy monitoring, and real-time data visualization on web
+              platforms.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Social Media & Digital Campaign Management</h4>
+          <ul>
+            <li>Led content strategy and campaign execution across platforms like Instagram, Facebook, and LinkedIn.
+            </li>
+            <li>Designed interactive posts, tracked engagement metrics, and increased brand visibility through targeted
+              outreach.</li>
+          </ul>
+        </div>
+
+        <div class="resume-item">
+          <h4>Project Leadership & Mentorship</h4>
+          <ul>
+            <li>Guided interns and student teams on real-world web and IoT projects.</li>
+            <li>Coordinated product development cycles and contributed to client-oriented digital solutions.</li>
+          </ul>
+        </div>
+
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item">
+          <h4>BTech</h4>
+          <h5>2019 - 2023</h5>
+          <p><em>University College of Engineering, Thodupuzha, Kerala</em></p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="resume-title">Professional Experience</h3>
+        <div class="resume-item">
+          <h4> EMBEDDED ENGINEER</h4>
+          <h5>2023 - Present</h5>
+          <p><em>Green Media AV Solutions</em></p>
+          <ul>
+            <li>Guided students through their internship experiences, imparting essential skills and knowledge for their
+              development.</li>
+            <li>Designed engaging games and interactive IoT activities, enhancing participant involvement.</li>
+            <li>Assisted in the development of full-stack web interfaces for IoT-based event and entertainment systems.
+            </li>
+            <li>Diagnosed and resolved both hardware and software issues in real-time IoT setups.</li>
+            <!-- <li>Collaborated with cross-functional teams to deliver efficient and user-friendly embedded solutions.</li> -->
+            <li>Built and tested prototype systems for  gaming.</li>
+            <li>Managed client demonstrations and provided technical support during events and live showcases.</li>
+            <li>Demonstrated strong leadership and mentoring abilities in managing small project teams.</li>
+          </ul>
+
+        </div>
+        <div class="resume-item">
+          <h4>Web Developer</h4>
+          <h5> 2021 - 2023</h5>
+          <p><em>Freelancer</em></p>
+          <ul>
+            <li>Designed and developed custom websites for clients including small businesses and personal portfolios.
+            </li>
+            <li>Created mobile-responsive sites using HTML, CSS, JavaScript, Bootstrap, and WordPress.</li>
+            <li>Integrated payment gateways, booking systems, and dynamic contact forms tailored to client requirements.
+            </li>
+            <li>Delivered SEO-optimized content and implemented analytics tools to monitor user engagement.</li>
+            <li>Managed social media integration to enhance clients' digital presence and service promotion.</li>
+            <li>Built and deployed over 10+ websites, ensuring high client satisfaction and providing post-launch
+              support.</li>
+          </ul>
+          <p>
+            <strong>Skills:</strong> HTML, CSS, JavaScript, Bootstrap, WordPress, SEO, Web Hosting, Social Media
+            Integration
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <!-- ======= Contact Section ======= -->
-  <section id="contact" class="contact">
-    <div class="container">
+  <div class="container contact">
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Contact Me</p>
+    </div>
 
-      <div class="section-title">
-        <h2>Contact</h2>
-        <p>Contact Me</p>
-      </div>
+    <div class="row">
+      <!-- Left: Info Boxes -->
+      <div class="col-lg-6">
+        <div class="row gy-4">
 
-      <div class="row mt-2">
-
-        <div class="col-md-6 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-map"></i>
-            <h3>My Address</h3>
-            <p>Desom,Aluva </p>
+          <div class="col-12 d-flex align-items-stretch">
+            <div class="info-box">
+              <i class="bx bx-share-alt"></i>
+              <h3>Social Profiles</h3>
+              <div class="social-links">
+                <a href="https://github.com/binulalkt" class="x"><i class="bi bi-github"></i></a>
+                <!-- <a href="https://www.facebook.com/abhi.jith.14661261" class="facebook"><i
+                    class="bi bi-facebook"></i></a> -->
+                <a href="https://www.instagram.com/binoolal" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/binu-lal-k-t/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Social Profiles</h3>
-            <div class="social-links">
-              <a href="https://github.com/binulalkt" class="twitter"><i class="bi bi-github"></i></a>
-              <a href="https://www.instagram.com/binoolal" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/binu-lal-k-t" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <div class="col-12 d-flex align-items-stretch">
+            <div class="info-box">
+              <i class="bx bx-phone-call"></i>
+              <h3>Contact</h3>
+              <p>+91 7902295585</p>
+            </div>
+          </div>
 
+          <div class="col-12 d-flex align-items-stretch">
+            <div class="info-box">
+              <i class="bx bx-envelope"></i>
+              <h3>Email</h3>
+              <p>ktbinulal@gmail.com</p>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-envelope"></i>
-            <h3>Email</h3>
-            <p>ktbinulal@gmail.com</p>
+      <!-- Right: Contact Form -->
+      <div class="contact contact-form col-lg-6">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="php-email-form">
+          <input type="hidden" name="access_key" value="8c932a2e-d65c-44d4-9892-e2e664cd6fe4">
+          <div class="loading"></div>
+          <div class="error-message">Oops! Something went wrong, please try again.</div>
+          <div class="sent-message">Thank you! Your message has been sent.</div>
+          <div class="message-group">
+            <div class="form-group mb-4">
+              <input type="text" name="name" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group mb-4">
+              <input type="email" name="email" class="form-control" placeholder="Your Email *" required>
+            </div>
+            <div class="form-group mb-4">
+              <textarea name="message" class="form-control" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <div class="text-end">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 mt-4 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-phone-call"></i>
-            <h3>Contact</h3>
-            <p>+91 79022 95585</p>
-          </div>
-        </div>
+        </form>
+
+        <script>
+          const form = document.getElementById('contactForm');
+          const loading = document.querySelector('.loading');
+          const errorMsg = document.querySelector('.error-message');
+          const sentMsg = document.querySelector('.sent-message');
+          const messageGroup = document.querySelector('.message-group');
+
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            messageGroup.classList.add('d-none');
+
+            try {
+              const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData
+              });
+
+              const result = await response.json();
+
+              loading.classList.add('d-none');
+
+              if (result.success) {
+                errorMsg.classList.add('d-none');
+                sentMsg.classList.add('d-block');
+              } else {
+                errorMsg.classList.add('d-block');
+                sentMsg.classList.add('d-none');
+              }
+
+            } catch (error) {
+              errorMsg.classList.add('d-block');
+              sentMsg.classList.add('d-none');
+              console.error('Form submission error:', error);
+            }
+          });
+        </script>
+
       </div>
     </div>
-  </section><!-- End Contact Section -->
-
-  <div class="credits">
-    Designed by <a href="https://github.com/binulal">KTB</a>
   </div>
+
+
+
+  <!-- <div class="credits">
+    Designed by <a href="#">KTB</a>
+  </div> -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -371,59 +462,9 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2X3CQ31DV4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2X3CQ31DV4');
-</script>
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Person",
-  "name": "Binu Lal K T",
-  "jobTitle": "Software Developer and Embedded Engineer",
-  "worksFor": [
-    {
-      "@type": "Organization",
-      "name": "Cabal Technologies LLP"
-    },
-    {
-      "@type": "Organization",
-      "name": "Onewiibe"
-    }
-  ],
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "University College of Engineering, Thodupuzha"
-  },
-  "sameAs": [
-    "https://github.com/binulalkt",
-    "https://www.instagram.com/binoolal",
-    "https://www.linkedin.com/in/binu-lal-k-t"
-  ],
-  "project": [
-    {
-      "@type": "CreativeWork",
-      "name": "Smart Hydroponics System",
-      "description": "An automated IoT-based hydroponics system developed as part of Academic project."
-    },
-    {
-      "@type": "CreativeWork",
-      "name": "Interactive Games",
-      "description": "Developed interactive game projects for Onewiibe, focusing on creative solutions for immersive gameplay."
-    }
-  ]
-}
-</script>
-
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>
